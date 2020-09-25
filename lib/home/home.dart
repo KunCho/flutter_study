@@ -150,7 +150,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       onTap: () {
-//        Utils.showToast('点击了${item.name}条目');
+        Utils.showToast('点击了${item.name}条目');
       },
     );
   }

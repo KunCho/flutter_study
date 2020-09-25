@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Demo3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'Demo3',
       theme: ThemeData(
         primaryColor: Colors.green,
@@ -60,22 +60,22 @@ class _MyDemo3State extends State<MyDemo3> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text('修改布局组件的值'),
         centerTitle: true,
       ),
-      body: new Center(
+      body: Center(
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            new Container(
-              padding: new EdgeInsets.all(0),
-              child: new IconButton(icon: _isFavourited?new Icon(Icons.star):new Icon(Icons.star_border),color: Colors.red[500], onPressed: _toggleFavorite),
+            Container(
+              padding: EdgeInsets.all(0),
+              child: IconButton(icon: _isFavourited? Icon(Icons.star): Icon(Icons.star_border),color: Colors.red[500], onPressed: _toggleFavorite),
             ),
-            new SizedBox(
+            SizedBox(
               width: 30,
-              child: new Text('$_favoriteCount'),
+              child: Text('$_favoriteCount'),
             ),
             _getToggleChild()
           ],

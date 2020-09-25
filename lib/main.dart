@@ -7,6 +7,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter/services.dart';
 
 import 'NewRoute.dart';
+import 'basic_layout/container/container_intro.dart';
 import 'demo1.dart';
 import 'demo10.dart';
 import 'demo11.dart';
@@ -64,6 +65,7 @@ class MyApp extends StatelessWidget {
       //注册路由表
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
+        "/ContainerIntro":(BuildContext context) => ContainerIntro(),
         "new_page": (context) => NewRoute(
               value: '嘻嘻哈哈',
             ),
@@ -111,7 +113,6 @@ class MyApp extends StatelessWidget {
           return NotFoundPage();
         });
       },
-//      home: DemoList(),
     );
   }
 }

@@ -18,17 +18,17 @@ class DemoPage extends StatelessWidget {
 class DemoList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        leading: new IconButton(icon: new Icon(Icons.menu), onPressed: null),
-        title: new Text('Demo 列表'),
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(icon: new Icon(Icons.menu), onPressed: null),
+        title: Text('Demo 列表'),
         centerTitle: true,
         actions: <Widget>[
-          new IconButton(icon: new Icon(Icons.search), onPressed: null)
+          IconButton(icon: new Icon(Icons.search), onPressed: null)
         ],
       ),
-      body: new Center(
-        child: new ListView(
+      body: Center(
+        child: ListView(
           padding: const EdgeInsets.all(20),
           children: <Widget>[
             RaisedButton(
@@ -41,6 +41,9 @@ class DemoList extends StatelessWidget {
               ),
               color: Colors.cyan,
             ),
+            Divider(),
+            CustomButton('/ContainerIntro', 'Demo1 基础布局页面', Colors.brown),
+            Divider(),
             CustomButton('/Demo1', 'Demo1 带有banner页面 动态改版', Colors.orange),
             Divider(),
             CustomButton('/Demo2', 'Demo2 简单布局页面', Colors.teal),

@@ -19,9 +19,9 @@ class Demo1 extends StatelessWidget {
               children: [
                 new Container(
                   padding: const EdgeInsets.only(bottom: 8.0),
-                  child: new Text('Oedchinen Lake Campground',style: new TextStyle(fontWeight: FontWeight.bold),),
+                  child: Text('Oedchinen Lake Campground',style: TextStyle(fontWeight: FontWeight.bold),),
                 ),
-                new Text('Kandersteg,Switzerland',style: new TextStyle(color: Colors.grey[500]),)
+                new Text('Kandersteg,Switzerland',style: TextStyle(color: Colors.grey[500]),)
               ],
             ),
           ),
@@ -39,7 +39,7 @@ class Demo1 extends StatelessWidget {
 //      Color color = Theme.of(context).primaryColor;
       Color color = Colors.green[500];
 
-      return new Column(
+      return Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -75,7 +75,7 @@ class Demo1 extends StatelessWidget {
 
     Widget textSection = new Container(
       padding: const EdgeInsets.all(32.0),
-      child: new Text(
+      child: Text(
         '''
         中文文本中文文本中文文本中文文本中文文本中文文本中文文本
         Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Alps. Situated 1,578 meters above sea level, it is one of the larger Alpine Lakes. A gondola ride from Kandersteg, followed by a half-hour walk through pastures and pine forest, leads you to the lake, which warms to 20 degrees Celsius in the summer. Activities enjoyed here include rowing, and riding the summer toboggan run.

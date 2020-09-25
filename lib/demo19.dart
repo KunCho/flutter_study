@@ -36,17 +36,6 @@ class _Demo19PageState extends State<Demo19Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-//      appBar: PreferredSize(
-////        title: Text('Bottom Navigation'),
-//        child: Offstage(
-//          offstage: _currentIndex == 3?true:false,
-//          child: AppBar(
-//            centerTitle: true,
-//            backgroundColor: _currentIndex !=3?Theme.of(context).accentColor:Colors.transparent,
-//          ),
-//        ),
-//        preferredSize: Size.fromHeight(MediaQuery.of(context).size.height *0.07),
-//      ),
       bottomNavigationBar: BottomNavigationBar(
         items: _list,
         type: BottomNavigationBarType.fixed,
