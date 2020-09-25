@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": 9,
+      "imageTitle": "内部招聘",
+      "imageUrl": "https://gjscrm-1256038144.cos.ap-beijing.myqcloud.com/common/1562926736274/WechatIMG49.jpeg",
+      "targetUrl": "https://d.xiumi.us/board/v5/3y9q3/156369493",
+      "businessId": -1,
+      "sort": -6,
+      "status": 0,
+      "gmtCreate": "2019-07-12 12:14:20",
+      "gmtUpdate": null,
+      "createdBy": 591160290710000
+    },
+    {
+      "id": 123,
+      "imageTitle": "店掌",
+      "imageUrl": "https://gjscrm-1256038144.cos.ap-beijing.myqcloud.com/common/1568771900471/diangzhang12.png",
+      "targetUrl": "https://b.xiumi.us/board/v5/3y9q3/138643121",
+      "businessId": -1,
+      "sort": -5,
+      "status": 0,
+      "gmtCreate": "2019-09-18 02:29:33",
+      "gmtUpdate": null,
+      "createdBy": 591160290710000
+    },
+    {
+      "id": 122,
+      "imageTitle": "智慧销售",
+      "imageUrl": "https://gjscrm-1256038144.cos.ap-beijing.myqcloud.com/common/1553741757260/zhihuixiaoshou.png",
+      "targetUrl": "https://d.xiumi.us/board/v5/3y9q3/137125718",
+      "businessId": -1,
+      "sort": -4,
+      "status": 0,
+      "gmtCreate": "2019-03-28 03:09:36",
+      "gmtUpdate": null,
+      "createdBy": 591160290710000
+    },
+    {
+      "id": 6,
+      "imageTitle": "优绩",
+      "imageUrl": "https://gj-prod-1256038144.cos.ap-beijing.myqcloud.com/common/1568796287151/youji26.png",
+      "targetUrl": "https://d.xiumi.us/board/v5/3y9q3/89738548",
+      "businessId": -1,
+      "sort": 1,
+      "status": 0,
+      "gmtCreate": "2019-09-19 01:30:54",
+      "gmtUpdate": null,
+      "createdBy": 591160290710000
+    },
+    {
+      "id": 7,
+      "imageTitle": "电子化盘点",
+      "imageUrl": "https://gj-prod-1256038144.cos.ap-beijing.myqcloud.com/digitalstore/banner_5.png",
+      "targetUrl": "https://v.xiumi.us/board/v5/3y9q3/95596364",
+      "businessId": -1,
+      "sort": 2,
+      "status": 0,
+      "gmtCreate": "2018-12-19 12:36:06",
+      "gmtUpdate": null,
+      "createdBy": 591160290710000
+    },
+    {
+      "id": 8,
+      "imageTitle": "课程培训",
+      "imageUrl": "https://gj-prod-1256038144.cos.ap-beijing.myqcloud.com/digitalstore/banner_6.png",
+      "targetUrl": "https://v.xiumi.us/board/v5/3y9q3/95607677",
+      "businessId": -1,
+      "sort": 3,
+      "status": 0,
+      "gmtCreate": "2018-12-19 12:36:06",
+      "gmtUpdate": null,
+      "createdBy": 591160290710000
+    },
+    {
+      "id": 119,
+      "imageTitle": "慧想",
+      "imageUrl": "https://gj-prod-1256038144.cos.ap-beijing.myqcloud.com/common/1553050147219/huixiangbanner.png",
+      "targetUrl": "https://v.xiumi.us/board/v5/3y9q3/89738248",
+      "businessId": -1,
+      "sort": 6,
+      "status": 0,
+      "gmtCreate": "2019-03-22 01:39:35",
+      "gmtUpdate": null,
+      "createdBy": 591160290710000
+    },
+    {
+      "id": 125,
+      "imageTitle": "员工反馈",
+      "imageUrl": "https://gjscrm-1256038144.cos.ap-beijing.myqcloud.com/common/1559525401675/fankui10.jpg",
+      "targetUrl": "https://v.xiumi.us/board/v5/3y9q3/150128704",
+      "businessId": -1,
+      "sort": 7,
+      "status": 0,
+      "gmtCreate": "2019-06-03 03:16:19",
+      "gmtUpdate": null,
+      "createdBy": 591160290710000
+    },
+    {
+      "id": 126,
+      "imageTitle": "商品订购&缺药登记",
+      "imageUrl": "https://gj-prod-1256038144.cos.ap-beijing.myqcloud.com/common/1565658606301/fankui12.png",
+      "targetUrl": "https://b.xiumi.us/board/v5/3y9q3/120403321",
+      "businessId": -1,
+      "sort": 8,
+      "status": 0,
+      "gmtCreate": "2019-08-13 04:50:30",
+      "gmtUpdate": null,
+      "createdBy": 591160290710000
+    }
+  ],
+  "code": "200",
+  "message": "OK"
+}
