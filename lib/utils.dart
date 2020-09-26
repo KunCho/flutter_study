@@ -30,9 +30,9 @@ class Utils {
         },
         transitionsBuilder: (_, Animation<double> animation, __, Widget child) {
           return FadeTransition(opacity: animation,
-            child: new FadeTransition(
+            child: FadeTransition(
               opacity:
-              new Tween<double>(begin: 0.5, end: 1.0).animate(animation),
+              Tween<double>(begin: 0.5, end: 1.0).animate(animation),
               child: child,
             ),);
         }));

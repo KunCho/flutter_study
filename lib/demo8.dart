@@ -8,7 +8,7 @@ class TapBoxC extends StatefulWidget {
       : super(key: key);
 
   @override
-  _TabBoxCState createState() => new _TabBoxCState();
+  _TabBoxCState createState() => _TabBoxCState();
 }
 
 class _TabBoxCState extends State<TapBoxC> {

@@ -8,18 +8,14 @@ import 'demo3.dart';
 class Demo19 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-//      title: 'Bottom Navigation',
-      home: Demo19Page(),
-      theme: ThemeData(primaryColor: Colors.orange),
-    );
+    return Demo19Page();
   }
 }
 
 class Demo19Page extends StatefulWidget {
   @override
   _Demo19PageState createState() {
-    return new _Demo19PageState();
+    return _Demo19PageState();
   }
 }
 

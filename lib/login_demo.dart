@@ -7,20 +7,7 @@ import 'demo19.dart';
 class LoginDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LoginDemoPage(),
-      routes: {
-        'Demo19':(context) => Demo19()
-      },
-      onUnknownRoute: (RouteSettings setting){
-        String name = setting.name;
-        print('onUnkonwRoute:$name');
-        return new MaterialPageRoute(builder: (context){
-          return Demo1();
-        });
-      },
-    );
+    return LoginDemoPage();
   }
 }
 
@@ -41,101 +28,95 @@ class _LoginDemoState extends State<LoginDemoPage> {
   bool hidePassword = true;
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Demo1',
-      theme: ThemeData(
-        primarySwatch: Colors.pink,
-      ),
-      home: Scaffold(
-          body: ListView(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(40),
-            child: Center(
-              child: new Image(
-                image: AssetImage('assets/image/ic_logo.png'),
-                width: 80,
-                height: 80,
-              ),
-            ),
-          ),
-          Padding(padding: const EdgeInsets.fromLTRB(20, 0, 20, 40),
-          child: Center(
-            child: Text('智店通',style: TextStyle(color: Color(0xff404040),fontSize: 20),),
-          ),),
-
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: TextField(
-              keyboardType: TextInputType.number,
-              controller: phoneController,
-              decoration: InputDecoration(
-                prefixIcon: Icon(
-                  Icons.phone,
-                  color: Color(0xFFFA6469),
+    return Scaffold(
+        body: ListView(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(40),
+              child: Center(
+                child: new Image(
+                  image: AssetImage('assets/image/ic_logo.png'),
+                  width: 80,
+                  height: 80,
                 ),
-
-                suffixIcon: IconButton(icon: Icon(Icons.close),color: Colors.grey ,onPressed: (){
-                  phoneController.clear();
-                }),
-                hintText: '请输入手机号',
-                border: InputBorder.none,
-
               ),
             ),
-          ),
-          Padding(
-           padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: Divider(),
-          )
-          ,
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: TextField(
-              keyboardType: TextInputType.number,
-              controller: passwordController,
-              obscureText: hidePassword, //设置密码隐藏
-              decoration: InputDecoration(
+            Padding(padding: const EdgeInsets.fromLTRB(20, 0, 20, 40),
+              child: Center(
+                child: Text('智店通',style: TextStyle(color: Color(0xff404040),fontSize: 20),),
+              ),),
+
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: TextField(
+                keyboardType: TextInputType.number,
+                controller: phoneController,
+                decoration: InputDecoration(
                   prefixIcon: Icon(
-                    Icons.lock,
+                    Icons.phone,
                     color: Color(0xFFFA6469),
                   ),
-                  suffixIcon: IconButton(icon: Icon(hidePassword?Icons.remove_red_eye:Icons.show_chart),color: Colors.grey ,onPressed: (){
+
+                  suffixIcon: IconButton(icon: Icon(Icons.close),color: Colors.grey ,onPressed: (){
+                    phoneController.clear();
+                  }),
+                  hintText: '请输入手机号',
+                  border: InputBorder.none,
+
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: Divider(),
+            )
+            ,
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: TextField(
+                keyboardType: TextInputType.number,
+                controller: passwordController,
+                obscureText: hidePassword, //设置密码隐藏
+                decoration: InputDecoration(
+                    prefixIcon: Icon(
+                      Icons.lock,
+                      color: Color(0xFFFA6469),
+                    ),
+                    suffixIcon: IconButton(icon: Icon(hidePassword?Icons.remove_red_eye:Icons.show_chart),color: Colors.grey ,onPressed: (){
 //                    passwordController.clear();
                       setState(() {
                         hidePassword = !hidePassword;
                       });
-                  }),
-                  hintText: '请输入密码',
-                  fillColor: Color(0xFFFA6469),
-                  border: InputBorder.none),
+                    }),
+                    hintText: '请输入密码',
+                    fillColor: Color(0xFFFA6469),
+                    border: InputBorder.none),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: Divider(),
-          )
-          ,
-          Padding(
-            padding: const EdgeInsets.fromLTRB(30, 30, 30, 5),
-            child: RaisedButton(
-              onPressed: () {
-                _login();
-              },
-              color: const Color(0xFFFA6469),
-              textColor: const Color(0xFFffffff),
-              child: Text('登录'),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: Divider(),
+            )
+            ,
+            Padding(
+              padding: const EdgeInsets.fromLTRB(30, 30, 30, 5),
+              child: RaisedButton(
+                onPressed: () {
+                  _login();
+                },
+                color: const Color(0xFFFA6469),
+                textColor: const Color(0xFFffffff),
+                child: Text('登录'),
+              ),
             ),
-          ),
-          Padding(padding: const EdgeInsets.fromLTRB(10, 0, 30, 10),
-            child: Text('忘记密码',textAlign: TextAlign.right,style: TextStyle(color: Colors.grey,fontSize: 12),),
-          ),
-          Padding(padding: const EdgeInsets.all(10),
-            child: Text('智能药店管理 v1.1.0',textAlign: TextAlign.center,style: TextStyle(color: Color(0xffccccd2),fontSize: 12)),
-          )
-        ],
-      )),
-    );
+            Padding(padding: const EdgeInsets.fromLTRB(10, 0, 30, 10),
+              child: Text('忘记密码',textAlign: TextAlign.right,style: TextStyle(color: Colors.grey,fontSize: 12),),
+            ),
+            Padding(padding: const EdgeInsets.all(10),
+              child: Text('智能药店管理 v1.1.0',textAlign: TextAlign.center,style: TextStyle(color: Color(0xffccccd2),fontSize: 12)),
+            )
+          ],
+        ));
   }
 
   void _login() {

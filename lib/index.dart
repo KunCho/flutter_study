@@ -42,7 +42,7 @@ class DemoList extends StatelessWidget {
               color: Colors.cyan,
             ),
             Divider(),
-            CustomButton('/ContainerIntro', 'Demo1 基础布局页面', Colors.brown),
+            CustomButton('/BasicLayoutComponent', 'Demo1 基础布局页面', Colors.brown),
             Divider(),
             CustomButton('/Demo1', 'Demo1 带有banner页面 动态改版', Colors.orange),
             Divider(),

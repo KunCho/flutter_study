@@ -3,13 +3,7 @@ import 'package:flutter/material.dart';
 class Demo3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Demo3',
-      theme: ThemeData(
-        primaryColor: Colors.green,
-      ),
-      home: MyDemo3(title: 'Demo3'),
-    );
+    return MyDemo3(title: 'Demo3');
   }
 }
 

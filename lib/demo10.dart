@@ -7,20 +7,19 @@ class Demo10 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return new Container(
+    return Container(
       height: 56,
       padding: const EdgeInsets.symmetric(horizontal: 8),
-      decoration: new BoxDecoration(color: Colors.blue[500]),
-      child: new Row(
+      decoration: BoxDecoration(color: Colors.blue[500]),
+      child: Row(
         children: <Widget>[
-          new IconButton(
-            icon: new Icon(Icons.menu),
+          IconButton(
+            icon: Icon(Icons.menu),
             onPressed: null,
             tooltip: 'Navigation menu',
           ),
-          new Expanded(child: title),
-          new IconButton(icon: new Icon(Icons.search), onPressed: null,tooltip: 'Search',)
+          Expanded(child: title),
+          IconButton(icon: new Icon(Icons.search), onPressed: null,tooltip: 'Search',)
         ],
       ),
     );

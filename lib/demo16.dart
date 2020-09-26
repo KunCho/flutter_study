@@ -7,13 +7,9 @@ class Demo16 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String title = 'Websocket demo';
-    return new MaterialApp(
+    return Demo16Page(
       title: title,
-      theme: ThemeData(primaryColor: Colors.green),
-      home: Demo16Page(
-        title: title,
-        channel: new IOWebSocketChannel.connect('ws://echo.websocket.org'),
-      ),
+      channel: new IOWebSocketChannel.connect('ws://echo.websocket.org'),
     );
   }
 }
@@ -27,27 +23,25 @@ class Demo16Page extends StatefulWidget {
 
   @override
   _Demo16PageState createState() {
-    // TODO: implement createState
-    return new _Demo16PageState();
+    return _Demo16PageState();
   }
 }
 
 class _Demo16PageState extends State<Demo16Page> {
-  TextEditingController _controller = new TextEditingController();
+  TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return new Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
-        child: new Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            new Form(
+            Form(
                 child: TextFormField(
               controller: _controller,
               decoration: InputDecoration(labelText: '发送信息:-)'),
@@ -71,7 +65,7 @@ class _Demo16PageState extends State<Demo16Page> {
           }
         },
         tooltip: '发送信息',
-        child: new Icon(Icons.send),
+        child: Icon(Icons.send),
         backgroundColor: Colors.green,
       ),
     );

@@ -2,17 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study/commponent/material_tap_widget.dart';
 import 'package:flutter_study/commponent/message_dialog.dart';
-import 'package:flutter_study/utils.dart';
 
 
 class UserSetting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: '设置',
-      home: UserSettingPage(context),
-    );
+    return UserSettingPage(context);
   }
 }
 
@@ -69,7 +64,7 @@ class UserSettingState extends State<UserSettingPage> {
             ),
             MaterialTapWidget(
               onTap: (){
-                Navigator.pushNamed(context, 'UserModifyPassword');
+                Navigator.pushNamed(context, '/UserModifyPassword');
 
                 /*Navigator.push(context, MaterialPageRoute(builder: (context){
                   return UserModifyPassword();

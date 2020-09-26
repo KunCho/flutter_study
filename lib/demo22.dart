@@ -33,13 +33,13 @@ class _IsolationDemoPageState extends State<IsolationDemoPage> {
     }
   }
   getProgressDialog() {
-    return new Center(child: new CircularProgressIndicator());
+    return Center(child: new CircularProgressIndicator());
   }
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(
-          title: new Text("Sample App"),
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Sample App"),
         ),
         body: getBody());
   }
@@ -49,10 +49,10 @@ class _IsolationDemoPageState extends State<IsolationDemoPage> {
         return getRow(position);
       });
   Widget getRow(int i) {
-    return new Padding(padding: new EdgeInsets.all(10.0), child: new Text("Row ${widgets[i]["title"]}"));
+    return Padding(padding: EdgeInsets.all(10.0), child: Text("Row ${widgets[i]["title"]}"));
   }
   loadData() async {
-    ReceivePort receivePort = new ReceivePort();
+    ReceivePort receivePort = ReceivePort();
     await Isolate.spawn(dataLoader, receivePort.sendPort);
     // The 'echo' isolate sends it's SendPort as the first message
     SendPort sendPort = await receivePort.first;
@@ -64,7 +64,7 @@ class _IsolationDemoPageState extends State<IsolationDemoPage> {
 // the entry point for the isolate
   static dataLoader(SendPort sendPort) async {
     // Open the ReceivePort for incoming messages.
-    ReceivePort port = new ReceivePort();
+    ReceivePort port = ReceivePort();
     // Notify any other isolates what port this isolate listens to.
     sendPort.send(port.sendPort);
     await for (var msg in port) {

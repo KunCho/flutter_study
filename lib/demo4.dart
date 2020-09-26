@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class FavoriteWidget extends StatefulWidget {
   @override
-  _Demo4State createState() =>new _Demo4State();
+  _Demo4State createState() => _Demo4State();
 }
 
 class _Demo4State extends State<FavoriteWidget> {
@@ -24,16 +24,16 @@ class _Demo4State extends State<FavoriteWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return new Row(
+    return Row(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        new Container(
-          padding: new EdgeInsets.all(0),
-          child: new IconButton(icon: _isFavourited?new Icon(Icons.star):new Icon(Icons.star_border),color: Colors.red[500], onPressed: _toggleFavorite),
+        Container(
+          padding: EdgeInsets.all(0),
+          child: IconButton(icon: _isFavourited?new Icon(Icons.star):new Icon(Icons.star_border),color: Colors.red[500], onPressed: _toggleFavorite),
         ),
-        new SizedBox(
+        SizedBox(
           width: 30,
-          child: new Text('$_favoriteCount'),
+          child: Text('$_favoriteCount'),
         )
       ],
     );

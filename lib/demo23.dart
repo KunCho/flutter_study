@@ -9,9 +9,7 @@ import 'package:flutter_study/utils.dart';
 class Demo23 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Demo23Page(),
-    );
+    return Demo23Page();
   }
 }
 

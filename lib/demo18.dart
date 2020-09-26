@@ -9,58 +9,55 @@ class Demo18 extends StatelessWidget {
   Widget build(BuildContext context) {
     final title = 'Dismissing Items';
 
-    return new MaterialApp(
-      title: title,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(title),
-        ),
-        body: ListView.builder(
-          itemBuilder: (context, index) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: ListView.builder(
+        itemBuilder: (context, index) {
 //            if (index.isOdd) {
 //              return new Divider();
 //            }
-            final item = items[index];
-            return Dismissible(
-              key: Key(item),
-              onDismissed: (direction) {
-                items.removeAt(index);
-                Scaffold.of(context)
-                    .showSnackBar(SnackBar(content: Text("$item dismissed")));
-              },
-              child: ListTile(
-                title: Text('$item'),
-              ),
-              background: Container(
-                  color: Colors.red,
-                  child: Align(
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      "删除",
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                      textAlign: TextAlign.end,
-                    ),
-                  )),
-              secondaryBackground: Container(
-                color: Colors.lightGreen,
+          final item = items[index];
+          return Dismissible(
+            key: Key(item),
+            onDismissed: (direction) {
+              items.removeAt(index);
+              Scaffold.of(context)
+                  .showSnackBar(SnackBar(content: Text("$item dismissed")));
+            },
+            child: ListTile(
+              title: Text('$item'),
+            ),
+            background: Container(
+                color: Colors.red,
                 child: Align(
                   alignment: Alignment.centerRight,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
-                    child: Text(
-                      '删除',
-                      style: TextStyle(color: Colors.white),
-                      textAlign: TextAlign.center,
+                  child: Text(
+                    "删除",
+                    style: TextStyle(
+                      color: Colors.white,
                     ),
+                    textAlign: TextAlign.end,
+                  ),
+                )),
+            secondaryBackground: Container(
+              color: Colors.lightGreen,
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+                  child: Text(
+                    '删除',
+                    style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),
-            );
-          },
-          itemCount: items.length,
-        ),
+            ),
+          );
+        },
+        itemCount: items.length,
       ),
     );
   }

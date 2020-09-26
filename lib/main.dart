@@ -7,7 +7,9 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter/services.dart';
 
 import 'NewRoute.dart';
-import 'basic_layout/container/container_intro.dart';
+import 'basic_component/basic_layout_component.dart';
+import 'basic_component/container/container_intro.dart';
+import 'basic_component/padding/padding_intro.dart';
 import 'demo1.dart';
 import 'demo10.dart';
 import 'demo11.dart';
@@ -65,7 +67,9 @@ class MyApp extends StatelessWidget {
       //注册路由表
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
+        "/BasicLayoutComponent":(BuildContext context) => BasicLayoutComponent(),
         "/ContainerIntro":(BuildContext context) => ContainerIntro(),
+        "/PaddingIntro":(BuildContext context) => PaddingIntro(),
         "new_page": (context) => NewRoute(
               value: '嘻嘻哈哈',
             ),

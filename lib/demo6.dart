@@ -15,15 +15,15 @@ class TapBoxB extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return new GestureDetector(
+    return GestureDetector(
       onTap: _handleTap,
-      child: new Container(
-        child: new Center(
-          child: new Text(active?'Active':'Inactive',style: new TextStyle(fontSize: 32,color: Colors.white),),
+      child: Container(
+        child: Center(
+          child: Text(active?'Active':'Inactive',style: new TextStyle(fontSize: 32,color: Colors.white),),
         ),
         width: 200,
           height: 200,
-        decoration: new BoxDecoration(
+        decoration: BoxDecoration(
           color: active?Colors.lightGreen[700]:Colors.grey[600],
         ),
       ),

@@ -11,17 +11,17 @@ class Demo1 extends StatelessWidget {
 
     Widget titleSection = new Container(
       padding: const EdgeInsets.all(32.0),
-      child: new Row(
+      child: Row(
         children: [
-          new Expanded(
-            child: new Column(
+          Expanded(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                new Container(
+                Container(
                   padding: const EdgeInsets.only(bottom: 8.0),
                   child: Text('Oedchinen Lake Campground',style: TextStyle(fontWeight: FontWeight.bold),),
                 ),
-                new Text('Kandersteg,Switzerland',style: TextStyle(color: Colors.grey[500]),)
+                Text('Kandersteg,Switzerland',style: TextStyle(color: Colors.grey[500]),)
               ],
             ),
           ),
@@ -29,8 +29,7 @@ class Demo1 extends StatelessWidget {
             Icons.star,
             color: Colors.red[500],
           ),
-          new Text('41'),*/
-         new FavoriteWidget(),
+          new Text('41'),*/FavoriteWidget(),
         ],
       ),
     );
@@ -43,15 +42,15 @@ class Demo1 extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          new Icon(
+          Icon(
             icon,
             color: color,
           ),
-          new Container(
+          Container(
             margin: const EdgeInsets.only(top: 8.0),
-            child: new Text(
+            child: Text(
               label,
-              style: new TextStyle(
+              style: TextStyle(
                 fontSize: 12.0,
                 fontWeight: FontWeight.w400,
                 color: color
@@ -62,8 +61,8 @@ class Demo1 extends StatelessWidget {
       );
     }
 
-    Widget buttonSection = new Container(
-      child: new Row(
+    Widget buttonSection = Container(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           buildButtonColumn(Icons.call, 'CALL'),
@@ -73,7 +72,7 @@ class Demo1 extends StatelessWidget {
       ),
     );
 
-    Widget textSection = new Container(
+    Widget textSection = Container(
       padding: const EdgeInsets.all(32.0),
       child: Text(
         '''
@@ -83,22 +82,20 @@ class Demo1 extends StatelessWidget {
         softWrap: true,
       ),
     );
-    return new MaterialApp(
-      home: new Scaffold(
+    return Scaffold(
 //        appBar: new AppBar(
 //          title: new Text('欢迎页'),
 //        ),
-        body: new ListView(
-          children: <Widget>[
-            Pagination(),
-            titleSection,
-            buttonSection,
-            textSection,
-            new TapBoxA(),
-            new ParentWidget(),
+      body: ListView(
+        children: <Widget>[
+          Pagination(),
+          titleSection,
+          buttonSection,
+          textSection,
+          TapBoxA(),
+          ParentWidget(),
 //            new TapCParentWidget(),
-          ],
-        ),
+        ],
       ),
     );
   }

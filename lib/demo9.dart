@@ -4,7 +4,7 @@ import 'demo8.dart';
 
 class TapCParentWidget extends StatefulWidget{
   @override
-  _TapCParentWidgetState createState() => new _TapCParentWidgetState();
+  _TapCParentWidgetState createState() => _TapCParentWidgetState();
 
 }
 
@@ -17,7 +17,7 @@ class _TapCParentWidgetState extends State<TapCParentWidget>{
         _active = newValue;
       });
     }
-    return new Container(
+    return Container(
       child: TapBoxC(
         active: _active,
         onChanged: _handleTapBoxChanged,

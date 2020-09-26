@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class UserCenter extends StatefulWidget {
   @override
   _UserCenterState createState() {
-    return new _UserCenterState();
+    return _UserCenterState();
   }
 }
 

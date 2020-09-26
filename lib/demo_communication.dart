@@ -27,7 +27,6 @@ class CommunicationPageState extends State<CommunicationPage>{
   String dataShared = 'No data';
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       body: Center(
         child: Text(dataShared),

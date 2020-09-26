@@ -8,10 +8,11 @@ class CustomButton extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(onPressed: (){
+    return RaisedButton(onPressed: (){
       print('打印：===='+label);
+      print(context);
+      print('===================');
       LogUtil.e(label);
-//      LogUtil.v(label);
       Navigator.pushNamed(context, label);
 
     },child: Text(title,style: TextStyle(color: Colors.white),),color: color,);

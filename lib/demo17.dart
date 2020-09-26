@@ -4,10 +4,7 @@ class Demo17 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     final title = 'Inkwel Demo';
-    return new MaterialApp(
-      title:title,
-      home: new Demo17Page(title: title,),
-    );
+    return  Demo17Page(title: title,);
   }
 
 }
@@ -19,7 +16,7 @@ class Demo17Page extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text(title),
       ),

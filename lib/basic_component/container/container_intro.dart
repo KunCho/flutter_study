@@ -3,29 +3,28 @@ import 'package:flutter/material.dart';
 class ContainerIntro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Colors.teal,
-          title: Text('Container的简单使用'),
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.teal,
+        title: Text('Container的简单介绍与使用'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
-        body: Container(
-          color: const Color(0xFFF3F3F3),
-          height: double.infinity,
-          width: double.infinity,
-          child: SingleChildScrollView(
-            child: Container(
-              child: Column(
-                children: [
-                  Text(
-                    '''
+      ),
+      body: Container(
+        color: const Color(0xFFF3F3F3),
+        height: double.infinity,
+        width: double.infinity,
+        child: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              children: [
+                Text(
+                  '''
 Container的简单介绍
 
 Container在Flutter中太常见了。官方给出的简介，是一个结合了绘制（painting）、定位（positioning）以及尺寸（sizing）widget的widget。
@@ -65,33 +64,32 @@ Container算是目前项目中，最经常用到的一个widget。在实际使�
 需要对齐（Align也可以实现）；
 需要设置背景图片的时候（也可以使用Stack实现）。
         ''',
-                    style: TextStyle(color: Colors.black, fontSize: 14.0),
-                  ),
-                  Container(
-                    constraints: BoxConstraints.expand(
-                        height:
-                        Theme.of(context).textTheme.display1.fontSize * 1.1 + 200),
-                    decoration: BoxDecoration(
-                      border: Border.all(width: 2.0, color: Colors.red),
-                      color: Colors.grey,
-                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                      image: new DecorationImage(
-                        image: new NetworkImage(
-                            'http://h.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=0d023672312ac65c67506e77cec29e27/9f2f070828381f30dea167bbad014c086e06f06c.jpg'),
-                        centerSlice: new Rect.fromLTRB(270.0, 180.0, 1360.0, 730.0),
-                      ),
+                  style: TextStyle(color: Colors.black, fontSize: 14.0),
+                ),
+                Container(
+                  constraints: BoxConstraints.expand(
+                      height:
+                      Theme.of(context).textTheme.display1.fontSize * 1.1 + 200),
+                  decoration: BoxDecoration(
+                    border: Border.all(width: 2.0, color: Colors.red),
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                    image: new DecorationImage(
+                      image: new NetworkImage(
+                          'http://h.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=0d023672312ac65c67506e77cec29e27/9f2f070828381f30dea167bbad014c086e06f06c.jpg'),
+                      centerSlice: new Rect.fromLTRB(270.0, 180.0, 1360.0, 730.0),
                     ),
-                    padding: const EdgeInsets.all(8.0),
-                    alignment: Alignment.center,
-                    child: new Text('Hello World',
-                        style: Theme.of(context)
-                            .textTheme
-                            .display1
-                            .copyWith(color: Colors.black)),
-//          transform: new Matrix4.rotationZ(0.3),
                   ),
-                ],
-              ),
+                  padding: const EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: new Text('Hello World',
+                      style: Theme.of(context)
+                          .textTheme
+                          .display1
+                          .copyWith(color: Colors.black)),
+//          transform: new Matrix4.rotationZ(0.3),
+                ),
+              ],
             ),
           ),
         ),
