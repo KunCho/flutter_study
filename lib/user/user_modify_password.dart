@@ -16,7 +16,7 @@ class UserModifyPasswordPage extends StatefulWidget {
 
   @override
   _UserModifyPasswordState createState() {
-    return new _UserModifyPasswordState(pageContext);
+    return _UserModifyPasswordState(pageContext);
   }
 }
 

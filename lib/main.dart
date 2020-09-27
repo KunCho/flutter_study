@@ -8,8 +8,12 @@ import 'package:flutter/services.dart';
 
 import 'NewRoute.dart';
 import 'basic_component/basic_layout_component.dart';
-import 'basic_component/container/container_intro.dart';
-import 'basic_component/padding/padding_intro.dart';
+import 'basic_component/intro/align_intro.dart';
+import 'basic_component/intro/aspectRatio_intro.dart';
+import 'basic_component/intro/baseline_intro.dart';
+import 'basic_component/intro/container_intro.dart';
+import 'basic_component/intro/fittedBox_intro.dart';
+import 'basic_component/intro/padding_intro.dart';
 import 'demo1.dart';
 import 'demo10.dart';
 import 'demo11.dart';
@@ -70,6 +74,10 @@ class MyApp extends StatelessWidget {
         "/BasicLayoutComponent":(BuildContext context) => BasicLayoutComponent(),
         "/ContainerIntro":(BuildContext context) => ContainerIntro(),
         "/PaddingIntro":(BuildContext context) => PaddingIntro(),
+        "/AlignIntro":(BuildContext context) => AlignIntro(),
+        "/FittedBoxIntro":(BuildContext context) => FittedBoxIntro(),
+        "/AspectRatioIntro":(BuildContext context) => AspectRatioIntro(),
+        "/BaseLineIntro":(BuildContext context) => BaseLineIntro(),
         "new_page": (context) => NewRoute(
               value: '嘻嘻哈哈',
             ),

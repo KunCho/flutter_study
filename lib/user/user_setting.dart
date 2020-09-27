@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study/commponent/material_tap_widget.dart';
 import 'package:flutter_study/commponent/message_dialog.dart';
 
+import '../utils.dart';
+
 
 class UserSetting extends StatelessWidget {
   @override
@@ -18,7 +20,7 @@ class UserSettingPage extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    return new UserSettingState(pageContext);
+    return UserSettingState(pageContext);
   }
 }
 
@@ -171,7 +173,7 @@ class UserSettingState extends State<UserSettingPage> {
             ),
             MaterialTapWidget(
               onTap: (){
-//                Utils.showToast('点击了密码设置。');
+                Utils.showToast('点击了密码设置。');
               },
 //              color: Color(0xffeeeeee),
               child: Container(
