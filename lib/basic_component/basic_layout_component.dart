@@ -27,6 +27,7 @@ class BasicLayoutComponent extends StatelessWidget {
               CustomButton('/LimitedBoxIntro', 'LimitedBox简单介绍与使用', Colors.yellow),
               CustomButton('/OffstageIntro', 'Offstage简单介绍与使用', Colors.amber),
               CustomButton('/TransformIntro', 'Transform简单介绍与使用', Colors.brown),
+              CustomButton('/FlowIntro', 'FlowIntro简单介绍与使用', Colors.deepPurple),
             ],
           ),
         ),

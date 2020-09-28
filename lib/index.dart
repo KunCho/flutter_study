@@ -41,7 +41,7 @@ class DemoList extends StatelessWidget {
               ),
               color: Colors.cyan,
             ),
-            CustomButton('/BasicLayoutComponent', 'Demo1 基础布局页面', Colors.brown),
+            CustomButton('/BasicLayoutComponent', 'Demo1 基础布局组件介绍', Colors.brown),
             CustomButton('/Demo1', 'Demo1 带有banner页面 动态改版', Colors.orange),
             CustomButton('/Demo2', 'Demo2 简单布局页面', Colors.teal),
             CustomButton('/Demo3', 'Demo3 修改组件', Colors.purple),

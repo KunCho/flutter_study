@@ -14,6 +14,7 @@ import 'basic_component/intro/aspectRatio_intro.dart';
 import 'basic_component/intro/baseline_intro.dart';
 import 'basic_component/intro/container_intro.dart';
 import 'basic_component/intro/fittedBox_intro.dart';
+import 'basic_component/intro/flow_intro.dart';
 import 'basic_component/intro/fractionallySizeBox_intro.dart';
 import 'basic_component/intro/limitedBox_intro.dart';
 import 'basic_component/intro/offstage_intro.dart';
@@ -88,6 +89,7 @@ class MyApp extends StatelessWidget {
         "/LimitedBoxIntro":(BuildContext context) => LimitedBoxIntro(),
         "/OffstageIntro":(BuildContext context) => OffstageIntro(),
         "/TransformIntro":(BuildContext context) => TransformIntro(),
+        "/FlowIntro":(BuildContext context) => FlowIntro(),
         "new_page": (context) => NewRoute(
               value: '嘻嘻哈哈',
             ),
