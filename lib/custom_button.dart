@@ -10,9 +10,6 @@ class CustomButton extends StatelessWidget{
   Widget build(BuildContext context) {
     return RaisedButton(onPressed: (){
       print('打印：===='+label);
-      print(context);
-      print('===================');
-      LogUtil.e(label);
       Navigator.pushNamed(context, label);
 
     },child: Text(title,style: TextStyle(color: Colors.white),),color: color,);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/demo12.dart';
+import 'package:flutter_study/custom_button.dart';
 import 'package:flutter_study/log_utils.dart';
 import 'package:wrapper/wrapper.dart';
 
@@ -23,7 +23,6 @@ class TextList extends StatelessWidget {
 //            CustomButton('/Text6','Text6',Colors.brown),
             RaisedButton(
                 onPressed: () {
-//              _navigateNewRoute(wi)
                   print('HHHHHHHH');
                   _navigateNewRoute(context);
                 },
@@ -37,12 +36,12 @@ class TextList extends StatelessWidget {
             Wrapper(
               color: Color(0xff95EC69),
               spineType: SpineType.left,
-              child: Text('灵犀'*5),
+              child: Text('灵犀' * 5),
             ),
             Wrapper(
               color: Color(0xffFFFFFF),
               spineType: SpineType.right,
-              child: Text('你好'*6),
+              child: Text('你好' * 6),
             )
           ],
         ),

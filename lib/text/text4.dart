@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 class Text4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Fade demo',
-      theme: ThemeData(primarySwatch: Colors.green),
-      home: FadeTest(title: 'Fade demo'),
-    );
+    return FadeTest(title: 'Fade demo');
   }
 }
 

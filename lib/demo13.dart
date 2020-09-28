@@ -5,7 +5,6 @@ import 'package:flutter_easyrefresh/ball_pulse_header.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_study/utils.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import 'model/play_data.dart';
 import 'net_request/net_utils.dart';

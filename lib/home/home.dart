@@ -1,10 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_easyrefresh/ball_pulse_footer.dart';
-import 'package:flutter_easyrefresh/ball_pulse_header.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_study/commponent/material_tap_widget.dart';
 import 'package:flutter_study/commponent/my_pagination.dart';
 import 'package:flutter_study/model/banner_model.dart';

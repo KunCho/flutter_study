@@ -4,9 +4,9 @@ import 'package:english_words/english_words.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Text6 extends StatelessWidget {
-  final value;
+  final value = '';
 
-  Text6({Key key, @required this.value}) : super(key: key);
+//  Text6({Key key, @required this.value}) : super(key: key);
   String _errorText;
 
   @override

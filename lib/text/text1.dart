@@ -7,14 +7,6 @@ class Text1 extends StatelessWidget{
       appBar: AppBar(
         centerTitle: true,
         title: Text('data'),
-        leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back,
-              color: Colors.black,
-            ),
-            onPressed: () {
-              Navigator.of(context).pop();
-            }),
       ),
       body: Container(
         child: Row(

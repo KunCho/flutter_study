@@ -3,8 +3,6 @@ import 'package:flutter_easyrefresh/ball_pulse_footer.dart';
 import 'package:flutter_easyrefresh/ball_pulse_header.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:flutter_study/log_utils.dart';
-import 'package:flutter_study/utils.dart';
 
 class Demo23 extends StatelessWidget {
   @override

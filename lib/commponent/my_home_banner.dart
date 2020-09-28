@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_study/model/banner_model.dart';
 

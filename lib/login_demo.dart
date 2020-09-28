@@ -1,9 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'demo1.dart';
-import 'demo19.dart';
-
 class LoginDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -34,7 +31,7 @@ class _LoginDemoState extends State<LoginDemoPage> {
             Padding(
               padding: const EdgeInsets.all(40),
               child: Center(
-                child: new Image(
+                child: Image(
                   image: AssetImage('assets/image/ic_logo.png'),
                   width: 80,
                   height: 80,

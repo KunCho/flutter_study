@@ -83,9 +83,6 @@ class Demo1 extends StatelessWidget {
       ),
     );
     return Scaffold(
-//        appBar: new AppBar(
-//          title: new Text('欢迎页'),
-//        ),
       body: ListView(
         children: <Widget>[
           Pagination(),

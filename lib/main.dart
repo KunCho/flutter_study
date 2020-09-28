@@ -8,12 +8,17 @@ import 'package:flutter/services.dart';
 
 import 'NewRoute.dart';
 import 'basic_component/basic_layout_component.dart';
+import 'basic_component/intro/Intrinsic_intro.dart';
 import 'basic_component/intro/align_intro.dart';
 import 'basic_component/intro/aspectRatio_intro.dart';
 import 'basic_component/intro/baseline_intro.dart';
 import 'basic_component/intro/container_intro.dart';
 import 'basic_component/intro/fittedBox_intro.dart';
+import 'basic_component/intro/fractionallySizeBox_intro.dart';
+import 'basic_component/intro/limitedBox_intro.dart';
+import 'basic_component/intro/offstage_intro.dart';
 import 'basic_component/intro/padding_intro.dart';
+import 'basic_component/intro/transform_intro.dart';
 import 'demo1.dart';
 import 'demo10.dart';
 import 'demo11.dart';
@@ -78,6 +83,11 @@ class MyApp extends StatelessWidget {
         "/FittedBoxIntro":(BuildContext context) => FittedBoxIntro(),
         "/AspectRatioIntro":(BuildContext context) => AspectRatioIntro(),
         "/BaseLineIntro":(BuildContext context) => BaseLineIntro(),
+        "/FractionallySizeBoxIntro":(BuildContext context) => FractionallySizeBoxIntro(),
+        "/IntrinsicIntro":(BuildContext context) => IntrinsicIntro(),
+        "/LimitedBoxIntro":(BuildContext context) => LimitedBoxIntro(),
+        "/OffstageIntro":(BuildContext context) => OffstageIntro(),
+        "/TransformIntro":(BuildContext context) => TransformIntro(),
         "new_page": (context) => NewRoute(
               value: '嘻嘻哈哈',
             ),

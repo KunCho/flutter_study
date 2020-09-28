@@ -38,6 +38,7 @@ class MyButton extends StatelessWidget{
       child: RaisedButton(
         padding: const EdgeInsets.all(12),
         child: Text('FLat Button'),
+        onPressed: null,
       ),
     );
   }
