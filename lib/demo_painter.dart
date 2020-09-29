@@ -21,7 +21,7 @@ class SignaturePainter extends CustomPainter{
 
 class Signature extends StatefulWidget{
   @override
-  SignatureState createState() => new SignatureState();
+  SignatureState createState() => SignatureState();
 
 }
 
@@ -38,14 +38,14 @@ class SignatureState extends State<Signature>{
               RenderBox referenceBox = context.findRenderObject();
               Offset localPosition =
               referenceBox.globalToLocal(details.globalPosition);
-              _points = new List.from(_points)..add(localPosition);
+              _points = List.from(_points)..add(localPosition);
             });
           },
           onPanEnd: (DragEndDetails details) => _points.add(null),
 //          child: new CustomPaint(painter: new SignaturePainter(_points)),
 
         ),
-        CustomPaint(painter: new SignaturePainter(_points)),
+        CustomPaint(painter: SignaturePainter(_points)),
       ],
     );
   }

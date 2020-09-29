@@ -4,11 +4,7 @@ import 'package:flutter/services.dart';
 class Communication extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Sample Shared App Handler',
-
-      home:CommunicationPage() ,
-    );
+    return CommunicationPage();
   }
 
 }
@@ -16,7 +12,7 @@ class Communication extends StatelessWidget{
 class CommunicationPage extends StatefulWidget{
 
   @override
-  CommunicationPageState createState() => new CommunicationPageState();
+  CommunicationPageState createState() => CommunicationPageState();
 
   CommunicationPage({Key key}):super(key:key);
 

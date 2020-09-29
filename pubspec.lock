@@ -239,6 +239,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.10.11"
+  fluro:
+    dependency: "direct main"
+    description:
+      name: fluro
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.6.3"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -277,6 +284,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_redux:
+    dependency: "direct main"
+    description:
+      name: flutter_redux
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.6.0"
   flutter_spinkit:
     dependency: "direct main"
     description:
@@ -560,6 +574,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.3.8"
+  redux:
+    dependency: "direct main"
+    description:
+      name: redux
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "4.0.0+3"
   rxdart:
     dependency: transitive
     description:

@@ -1,82 +1,47 @@
 import 'dart:async';
 
+import 'package:fluro/fluro.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:flutter_study/route/router.dart';
 
-import 'NewRoute.dart';
-import 'basic_component/basic_layout_component.dart';
-import 'basic_component/intro/Intrinsic_intro.dart';
-import 'basic_component/intro/align_intro.dart';
-import 'basic_component/intro/aspectRatio_intro.dart';
-import 'basic_component/intro/baseline_intro.dart';
-import 'basic_component/intro/container_intro.dart';
-import 'basic_component/intro/fittedBox_intro.dart';
-import 'basic_component/intro/flow_intro.dart';
-import 'basic_component/intro/fractionallySizeBox_intro.dart';
-import 'basic_component/intro/limitedBox_intro.dart';
-import 'basic_component/intro/offstage_intro.dart';
-import 'basic_component/intro/padding_intro.dart';
-import 'basic_component/intro/transform_intro.dart';
-import 'demo1.dart';
-import 'demo10.dart';
-import 'demo11.dart';
-import 'demo13.dart';
-import 'demo14.dart';
-import 'demo15.dart';
-import 'demo16.dart';
-import 'demo17.dart';
-import 'demo18.dart';
-import 'demo19.dart';
-import 'demo2.dart';
-import 'demo20.dart';
-import 'demo22.dart';
-import 'demo23.dart';
-import 'demo3.dart';
-import 'demo_communication.dart';
-import 'demo_painter.dart';
-import 'home/home.dart';
 import 'index.dart';
-import 'login_demo.dart';
 import 'not_found_page.dart';
-import 'text/text1.dart';
-import 'text/text2.dart';
-import 'text/text3.dart';
-import 'text/text4.dart';
-import 'text/text5.dart';
-import 'text/text6.dart';
-import 'text/text_list.dart';
-import 'user/user_about.dart';
-import 'user/user_center.dart';
-import 'user/user_fake_wechat.dart';
-import 'user/user_info.dart';
-import 'user/user_modify_password.dart';
-import 'user/user_setting.dart';
 
 const int ThemeColor = 0xFFC91B3A;
 
 void main() {
+//  FluroRouter.setupRouter();
+  final router = Router();
+  FluroRouter.configureRoutes(router);
+  FluroRouter.router =router;
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
 //      home: new DemoList(),
       theme: ThemeData(
-        primaryColor: Colors.greenAccent,
+        primaryColor: const Color(0xffda4c3d),
       ),
 
-      home: MyHomePage(
-        title: '首页',
-      ),
+//      home: MyHomePage(
+//        title: '首页',
+//      ),
 
-      //注册路由表
+      initialRoute: '/',
+
+
       debugShowCheckedModeBanner: false,
-      routes: <String, WidgetBuilder>{
+      //注册路由表
+      onGenerateRoute: FluroRouter.router.generator,//使用Fluro注册路由表
+      /*routes: <String, WidgetBuilder>{
         "/BasicLayoutComponent":(BuildContext context) => BasicLayoutComponent(),
         "/ContainerIntro":(BuildContext context) => ContainerIntro(),
         "/PaddingIntro":(BuildContext context) => PaddingIntro(),
@@ -93,43 +58,10 @@ class MyApp extends StatelessWidget {
         "new_page": (context) => NewRoute(
               value: '嘻嘻哈哈',
             ),
-        "/Demo1": (BuildContext context) => Demo1(),
-        "/Demo2": (BuildContext context) => Demo2(),
-        "/Demo3": (BuildContext context) => Demo3(),
-        "/Demo4": (BuildContext context) => Demo4Signature(),
-        "/Demo10Scaffold": (BuildContext context) => Demo10Scaffold(),
-        "/Demo11": (BuildContext context) => Demo11(),
-        "/Demo13": (BuildContext context) => Demo13(),
-        "/Demo15": (BuildContext context) => Demo15(),
-        "/Demo16": (BuildContext context) => Demo16(),
-        "/Demo17": (BuildContext context) => Demo17(),
         "/MyHomePage": (BuildContext context) => MyHomePage(
               title: '随机列表',
             ),
-        "/Demo18": (BuildContext context) => Demo18(
-            items: new List<String>.generate(20, (i) => 'Item ${i + 1}')),
-        "/LoginDemo": (BuildContext context) => LoginDemo(),
-        "/Demo19": (BuildContext context) => Demo19(),
-        "/Demo20": (BuildContext context) => Demo20(),
-        "/UserCenter": (BuildContext context) => UserCenter(),
-        "/UserInfo": (BuildContext context) => UserInfo(),
-        "/UserSetting": (BuildContext context) => UserSetting(),
-        "/UserModifyPassword": (BuildContext context) => UserModifyPassword(),
-        "/UserAbout": (BuildContext context) => UserAbout(),
-        "/Home": (BuildContext context) => Home(),
-        "/Communication": (BuildContext context) => Communication(),
-        "/UserFakeWeChat": (BuildContext context) => UserFakeWeChat(),
-        "/Demo23": (BuildContext context) => Demo23Page(),
-        "/Text": (BuildContext context) => TextList(),
-        '/Text1': (BuildContext context) => Text1(),
-        '/Text2': (BuildContext context) => Text2Page(context),
-        '/Text3': (BuildContext context) => Text3Page(context),
-        '/Text4': (BuildContext context) => Text4(),
-        '/Text5': (BuildContext context) => Text5(),
-        '/Text6': (BuildContext context) => Text6(),
-        '/Demo22': (BuildContext context) => IsolationDemoPage(),
-        '/Text8': (BuildContext context) => SampleAppPage(),
-      },
+      },*/
       onUnknownRoute: (RouteSettings setting) {
         String name = setting.name;
         print('异常路由：onUnknownRoute:$name');

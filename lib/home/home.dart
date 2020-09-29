@@ -12,10 +12,7 @@ import '../utils.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage(context),
-      title: '主页',
-    );
+    return HomePage(context);
   }
 }
 

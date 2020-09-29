@@ -157,7 +157,6 @@ class _BottomNavigationBarFullDefault extends State{
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       iconSize: 24.0,

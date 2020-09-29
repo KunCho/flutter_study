@@ -1,5 +1,6 @@
-import 'package:common_utils/common_utils.dart';
 import 'package:flutter/material.dart';
+
+import 'route/router.dart';
 class CustomButton extends StatelessWidget{
   final String label;
   final String title;
@@ -10,7 +11,8 @@ class CustomButton extends StatelessWidget{
   Widget build(BuildContext context) {
     return RaisedButton(onPressed: (){
       print('打印：===='+label);
-      Navigator.pushNamed(context, label);
+//      Navigator.pushNamed(context, label);
+      FluroRouter.navigateTo(context, label);
 
     },child: Text(title,style: TextStyle(color: Colors.white),),color: color,);
   }

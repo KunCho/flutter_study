@@ -5,7 +5,6 @@ import 'package:flutter_study/commponent/message_dialog.dart';
 
 import '../utils.dart';
 
-
 class UserSetting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -19,9 +18,7 @@ class UserSettingPage extends StatefulWidget {
   UserSettingPage(this.pageContext);
 
   @override
-  State<StatefulWidget> createState() {
-    return UserSettingState(pageContext);
-  }
+  UserSettingState createState() => UserSettingState(pageContext);
 }
 
 class UserSettingState extends State<UserSettingPage> {
@@ -32,7 +29,7 @@ class UserSettingState extends State<UserSettingPage> {
 
   @override
   Widget build(BuildContext context) {
-    context =pageContext;
+    context = pageContext;
     return Scaffold(
       backgroundColor: Color(0xffeeeeee),
       appBar: AppBar(
@@ -55,7 +52,6 @@ class UserSettingState extends State<UserSettingPage> {
 //        constraints: c,
         height: 230,
 
-
 //        alignment: AlignmentGeometry.lerp(a, b, t),
         child: ListView(
           padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
@@ -65,7 +61,7 @@ class UserSettingState extends State<UserSettingPage> {
               color: Color(0xffeeeeee),
             ),
             MaterialTapWidget(
-              onTap: (){
+              onTap: () {
                 Navigator.pushNamed(context, '/UserModifyPassword');
 
                 /*Navigator.push(context, MaterialPageRoute(builder: (context){
@@ -104,7 +100,7 @@ class UserSettingState extends State<UserSettingPage> {
                         Icon(Icons.keyboard_arrow_right),
                       ],
                     ),
-                    onTap: (){
+                    onTap: () {
                       /*showDialog(
                           context: context,
                           builder: (context) => LoadingDialog(
@@ -130,14 +126,20 @@ class UserSettingState extends State<UserSettingPage> {
                               ),
                             ],
                           ));*/
-                      showDialog(context: context,
-                        builder: (context) => MessageDialog(title: '提示', message: '清除缓存',negativeText: '取消',positiveText: '确定', onCloseEvent: (){
-                          Navigator.of(context).pop();
-                        },onPositivePressEvent: (){
-                          Navigator.of(context).pop();
-                        },)
-                      );
-
+                      showDialog(
+                          context: context,
+                          builder: (context) => MessageDialog(
+                                title: '提示',
+                                message: '清除缓存',
+                                negativeText: '取消',
+                                positiveText: '确定',
+                                onCloseEvent: () {
+                                  Navigator.of(context).pop();
+                                },
+                                onPositivePressEvent: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ));
                     },
                   )
                 ],
@@ -172,7 +174,7 @@ class UserSettingState extends State<UserSettingPage> {
               color: Color(0xffeeeeee),
             ),
             MaterialTapWidget(
-              onTap: (){
+              onTap: () {
                 Utils.showToast('点击了密码设置。');
               },
 //              color: Color(0xffeeeeee),
@@ -181,14 +183,17 @@ class UserSettingState extends State<UserSettingPage> {
                 padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
                 child: Row(
                   children: <Widget>[
-                    Text('密码设置',style: TextStyle(color: Colors.red),),
+                    Text(
+                      '密码设置',
+                      style: TextStyle(color: Colors.red),
+                    ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.center,
                 ),
 //                color: Color(0xff00ff00),
-              decoration:BoxDecoration(
-                  border: Border.all(color: Color(0xffeeeeee)),
-                  color: Colors.white),
+                decoration: BoxDecoration(
+                    border: Border.all(color: Color(0xffeeeeee)),
+                    color: Colors.white),
               ),
             ),
 //            Divider(),

@@ -117,7 +117,7 @@ class _LoginDemoState extends State<LoginDemoPage> {
   }
 
   void _login() {
-    if (phoneController.text.length != 11) {
+    if (phoneController.text.trim().length != 11) {
       showDialog(
           context: context,
           builder: (context) => AlertDialog(
@@ -138,7 +138,8 @@ class _LoginDemoState extends State<LoginDemoPage> {
       /*Navigator.push(context, MaterialPageRoute(builder: (context) {
         return Demo19();
       }));*/
-      Navigator.pushNamed(context, 'Demo19');
+//      Navigator.pushNamed(context, 'Demo19');
+      Navigator.pushReplacementNamed(context, '/DemoPage');
     }
   }
 }

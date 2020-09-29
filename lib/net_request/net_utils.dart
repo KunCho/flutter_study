@@ -16,7 +16,8 @@ BaseOptions options = new BaseOptions(
     connectTimeout: 5000,
     receiveTimeout: 3000,
     headers: optHeader);
-var dio = new Dio(options);
+var dio = new Dio(options)
+..interceptors.add(LogInterceptor(requestBody: false));//打开请求日志
 //dio
 
 class NetUtils {
@@ -34,11 +35,14 @@ class NetUtils {
     Directory documentsDir =
         await getApplicationDocumentsDirectory(); //获取文档目录的路径
     String documentsPath = documentsDir.path;
-//    print(documentsPath);
-    var dir = new Directory("$documentsPath/cookies");
+    print('==========documentsPath start============');
+    print(documentsPath);
+    print('==========documentsPath end============');
+    var dir = Directory("$documentsPath/cookies");
     await dir.create();
     // print('documentPath:${dir.path}');
 //    dio.interceptors.add(CookieManager(PersistCookieJar(dir: dir.path)));
+
     if (params != null) {
       response = await dio.get(url, queryParameters: params);
     } else {

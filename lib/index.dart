@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'custom_button.dart';
+import 'route/router.dart';
 
 class DemoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Colors.white,
-      ),
-      home: DemoList(),
-    );
+    return DemoList();
   }
 }
 
@@ -34,6 +29,7 @@ class DemoList extends StatelessWidget {
             RaisedButton(
               onPressed: () {
                 _navigateNewRoute(context);
+//                Routes
               },
               child: Text(
                 'new_page',
@@ -41,42 +37,44 @@ class DemoList extends StatelessWidget {
               ),
               color: Colors.cyan,
             ),
-            CustomButton('/BasicLayoutComponent', 'Demo1 基础布局组件介绍', Colors.brown),
-            CustomButton('/Demo1', 'Demo1 带有banner页面 动态改版', Colors.orange),
-            CustomButton('/Demo2', 'Demo2 简单布局页面', Colors.teal),
-            CustomButton('/Demo3', 'Demo3 修改组件', Colors.purple),
             CustomButton(
-                '/Demo4', 'Demo4 使用Canvas draw/paint', Colors.deepOrange),
-            CustomButton('/Demo11', 'Demo11 Fade渐显动画', Colors.green),
-            CustomButton('/Demo15', 'Demo15 loading加载网络GIF', Colors.blue),
-            CustomButton('/Demo13', 'Demo13 下拉刷新 上拉加载', Colors.amber),
-            CustomButton('/Demo16', 'Demo16 发送消息', Colors.cyan),
-            CustomButton('/Demo17', 'Demo17 flat button', Colors.cyan),
-            CustomButton('/Demo18', 'Demo18 列表右滑删除', Colors.green),
-            CustomButton('/LoginDemo', '仿登录页面', Colors.lime),
-            CustomButton('/Demo19', 'Demo19带有bottomNavigationBar', Colors.pink),
+                FluroRouter.basicLayout, 'Demo1 基础布局组件介绍', Colors.brown),
+            CustomButton(
+                FluroRouter.demo1, 'Demo1 带有banner页面 动态改版', Colors.orange),
+            CustomButton(FluroRouter.demo2, 'Demo2 简单布局页面', Colors.teal),
+            CustomButton(FluroRouter.demo3, 'Demo3 修改组件', Colors.purple),
+            CustomButton(FluroRouter.demo4, 'Demo4 使用Canvas draw/paint',
+                Colors.deepOrange),
+            CustomButton(FluroRouter.demo11, 'Demo11 Fade渐显动画', Colors.green),
+            CustomButton(
+                FluroRouter.demo15, 'Demo15 loading加载网络GIF', Colors.blue),
+            CustomButton(FluroRouter.demo13, 'Demo13 下拉刷新 上拉加载', Colors.amber),
+            CustomButton(FluroRouter.demo16, 'Demo16 发送消息', Colors.cyan),
+            CustomButton(FluroRouter.demo17, 'Demo17 flat button', Colors.cyan),
+            CustomButton(FluroRouter.demo18, 'Demo18 列表右滑删除', Colors.green),
+            CustomButton(FluroRouter.login, '仿登录页面', Colors.lime),
+            CustomButton(
+                FluroRouter.demo19, 'Demo19带有bottomNavigationBar', Colors.pink),
             Hero(
                 tag: 'hero',
                 child: IconButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, 'Demo20');
+//                    Navigator.pushNamed(context, 'Demo20');
+                    CustomButton(
+                        FluroRouter.demo20, 'Demo20 共享元素动画', Colors.green);
                   },
                   color: Colors.lightGreen,
-                  icon: new Icon(Icons.threed_rotation),
+                  icon: Icon(Icons.threed_rotation),
                 )),
-            RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/UserCenter');
-              },
-              child: Text('个人中心'),
-            ),
-            CustomButton('/UserInfo', '个人中心', Colors.pink),
-            CustomButton('/Home', '主页', Colors.amber),
-            CustomButton('/Communication', '通信', Colors.teal),
-            CustomButton('/UserFakeWeChat', '仿个人信息页面', Colors.deepPurple),
+            CustomButton(FluroRouter.userCenter, '个人中心', Colors.amber),
+            CustomButton(FluroRouter.userInfo, '个人中心', Colors.pink),
+            CustomButton(FluroRouter.home, '主页', Colors.amber),
+            CustomButton(FluroRouter.communication, '通信', Colors.teal),
+            CustomButton(FluroRouter.userFakeWeChat, '仿个人信息页面', Colors.deepPurple),
             CustomButton('/IsolationDemo', '隔离Demo', Colors.green),
-            CustomButton('/Demo23', 'Demo23', Colors.blue),
-            CustomButton('/Text', '练习', Colors.amber),
+            CustomButton(FluroRouter.demo23, 'Demo23', Colors.blue),
+            CustomButton(FluroRouter.sampleAppPage, 'SampleAppPage', Colors.lime),
+            CustomButton(FluroRouter.demo10, 'Demo10', Colors.pink),
           ],
         ),
       ),
@@ -84,8 +82,8 @@ class DemoList extends StatelessWidget {
   }
 
   void _navigateNewRoute(BuildContext context) async {
-    final result =
-        await Navigator.pushNamed(context, 'new_page', arguments: {'name': '传递对象', 'value': '8888'});
+    final result = await Navigator.pushNamed(context, 'new_page',
+        arguments: {'name': '传递对象', 'value': '8888'});
     print('收到的回传的数据:$result');
   }
 }

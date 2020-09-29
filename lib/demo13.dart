@@ -12,11 +12,7 @@ import 'net_request/net_utils.dart';
 class Demo13 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Demo13',
-      theme: new ThemeData(primarySwatch: Colors.green),
-      home: new Demo13Page(),
-    );
+    return Demo13Page();
   }
 }
 
@@ -25,7 +21,7 @@ class Demo13Page extends StatefulWidget {
 
   @override
   _Demo13PageState createState() {
-    return new _Demo13PageState();
+    return _Demo13PageState();
   }
 }
 
@@ -48,8 +44,8 @@ class _Demo13PageState extends State<Demo13Page> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('测试请求网络数据'),
+      appBar: AppBar(
+        title: Text('测试请求网络数据'),
         centerTitle: true,
       ),
 //      body: getBody(),
@@ -106,10 +102,7 @@ class _Demo13PageState extends State<Demo13Page> {
               (context, index) {
                 return GestureDetector(
                   onTap: () {
-//                    launch(widgets[index].link);
-//                    Utils.route2Web(context, widgets[index].chapterName, widgets[index].link);
                     Utils.route2Web(context, widgets[index].chapterName, widgets[index].link);
-
                   },
                   child: Container(
                     width: 60.0,

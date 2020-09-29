@@ -6,7 +6,7 @@ import 'dart:isolate';
 
 class IsolationDemoPage extends StatefulWidget {
   @override
-  _IsolationDemoPageState createState() => new _IsolationDemoPageState();
+  _IsolationDemoPageState createState() => _IsolationDemoPageState();
 
   IsolationDemoPage({Key key}) : super(key: key);
 }
@@ -33,7 +33,7 @@ class _IsolationDemoPageState extends State<IsolationDemoPage> {
     }
   }
   getProgressDialog() {
-    return Center(child: new CircularProgressIndicator());
+    return Center(child: CircularProgressIndicator());
   }
   @override
   Widget build(BuildContext context) {

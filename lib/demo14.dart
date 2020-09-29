@@ -3,18 +3,10 @@ import 'package:flutter/material.dart';
 import 'model/play_data.dart';
 import 'net_request/net_utils.dart';
 
-
-
 class SampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Sample App',
-      theme: new ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: new SampleAppPage(),
-    );
+    return SampleAppPage();
   }
 }
 
@@ -22,13 +14,12 @@ class SampleAppPage extends StatefulWidget {
   SampleAppPage({Key key}) : super(key: key);
 
   @override
-  _SampleAppPageState createState() => new _SampleAppPageState();
+  _SampleAppPageState createState() => _SampleAppPageState();
 }
 
 class _SampleAppPageState extends State<SampleAppPage> {
-  List widgets = [];
+  List<Datas> widgets = [];
   int pageNo = 0;
-
 
   @override
   void initState() {
@@ -52,30 +43,45 @@ class _SampleAppPageState extends State<SampleAppPage> {
     }
   }
 
-  ListView getListView() => new ListView.builder(
+  ListView getListView() => ListView.builder(
       itemCount: widgets.length,
       itemBuilder: (BuildContext context, int position) {
         return getRow(position);
       });
 
   getProgressDialog() {
-    return new Center(child: new CircularProgressIndicator());
+    return Center(child: CircularProgressIndicator());
   }
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(
-          title: new Text("Text8"),
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Text8"),
         ),
         body: getBody());
   }
 
   Widget getRow(int i) {
-    return new Padding(
-        padding: new EdgeInsets.all(10.0),
-        child: Text(widgets[i].chapterName)
-    );
+    print('===========start============');
+    print(widgets[i].toJson());
+    print('===========end============');
+    return Container(
+      height: 50.0,
+        decoration: BoxDecoration(
+//          border: Border.all(width: 2.0, color: Colors.red),
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(8.0),
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.black12,
+                  offset: Offset(0.0, 2.0),
+                  blurRadius: 15.0,
+                  spreadRadius: 1.0)
+            ]
+        ),
+        margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
+        padding: EdgeInsets.all(10.0), child: Text(widgets[i].chapterName));
   }
 
   loadData() async {
@@ -86,13 +92,9 @@ class _SampleAppPageState extends State<SampleAppPage> {
     print(dataUrl);
     try {
       var data = await NetUtils.get('/article/list/${pageNo}/json');
-
-      print('=================');
       print(data);
-
 //      Map dataMap = json.decode('{ "email": "123@qq.com","name":"kk" }');
       var playData = new PlayData.fromJson(data);
-
       setState(() {
         widgets = playData.data.datas;
       });
