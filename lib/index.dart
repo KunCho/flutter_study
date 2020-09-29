@@ -6,13 +6,6 @@ import 'route/router.dart';
 class DemoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return DemoList();
-  }
-}
-
-class DemoList extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(icon: Icon(Icons.menu), onPressed: null),
@@ -70,10 +63,12 @@ class DemoList extends StatelessWidget {
             CustomButton(FluroRouter.userInfo, '个人中心', Colors.pink),
             CustomButton(FluroRouter.home, '主页', Colors.amber),
             CustomButton(FluroRouter.communication, '通信', Colors.teal),
-            CustomButton(FluroRouter.userFakeWeChat, '仿个人信息页面', Colors.deepPurple),
+            CustomButton(
+                FluroRouter.userFakeWeChat, '仿个人信息页面', Colors.deepPurple),
             CustomButton('/IsolationDemo', '隔离Demo', Colors.green),
             CustomButton(FluroRouter.demo23, 'Demo23', Colors.blue),
-            CustomButton(FluroRouter.sampleAppPage, 'SampleAppPage', Colors.lime),
+            CustomButton(
+                FluroRouter.sampleAppPage, 'SampleAppPage', Colors.lime),
             CustomButton(FluroRouter.demo10, 'Demo10', Colors.pink),
           ],
         ),

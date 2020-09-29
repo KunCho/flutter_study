@@ -107,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
       try {
         Navigator.of(context).pushAndRemoveUntil(
             MaterialPageRoute(
-                builder: (BuildContext context) => DemoList()),
+                builder: (BuildContext context) => DemoPage()),
             ( //跳转到主页
                     Route route) =>
                 route == null);
