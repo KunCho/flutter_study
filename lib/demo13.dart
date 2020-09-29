@@ -9,15 +9,8 @@ import 'package:flutter_study/utils.dart';
 import 'model/play_data.dart';
 import 'net_request/net_utils.dart';
 
-class Demo13 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Demo13Page();
-  }
-}
-
-class Demo13Page extends StatefulWidget {
-  Demo13Page({Key key}) : super(key: key);
+class Demo13 extends StatefulWidget {
+  Demo13({Key key}) : super(key: key);
 
   @override
   _Demo13PageState createState() {
@@ -25,7 +18,7 @@ class Demo13Page extends StatefulWidget {
   }
 }
 
-class _Demo13PageState extends State<Demo13Page> {
+class _Demo13PageState extends State<Demo13> {
   List widgets = [];
   EasyRefreshController _controller;
   int _count = 20;

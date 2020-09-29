@@ -3,21 +3,14 @@ import 'package:flutter/material.dart';
 import 'model/play_data.dart';
 import 'net_request/net_utils.dart';
 
-class SampleApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return SampleAppPage();
-  }
-}
-
-class SampleAppPage extends StatefulWidget {
-  SampleAppPage({Key key}) : super(key: key);
+class SampleApp extends StatefulWidget {
+  SampleApp({Key key}) : super(key: key);
 
   @override
   _SampleAppPageState createState() => _SampleAppPageState();
 }
 
-class _SampleAppPageState extends State<SampleAppPage> {
+class _SampleAppPageState extends State<SampleApp> {
   List<Datas> widgets = [];
   int pageNo = 0;
 

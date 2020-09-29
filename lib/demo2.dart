@@ -125,7 +125,7 @@ class Demo2 extends StatelessWidget {
           contentSection,
           rating,
           buttonSection,
-          new Row(
+          Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Expanded(child: Image.asset('assets/image/lake.jpg')),

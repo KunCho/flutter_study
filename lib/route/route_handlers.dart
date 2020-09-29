@@ -100,5 +100,5 @@ var  userFakeWeChatHandler = Handler(
     handlerFunc: (BuildContext context,Map<String,dynamic> params) =>UserFakeWeChat()
 );
 var  sampleAppPageHandler = Handler(
-    handlerFunc: (BuildContext context,Map<String,dynamic> params) =>SampleAppPage()
+    handlerFunc: (BuildContext context,Map<String,dynamic> params) =>SampleApp()
 );

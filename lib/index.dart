@@ -48,17 +48,6 @@ class DemoPage extends StatelessWidget {
             CustomButton(FluroRouter.login, '仿登录页面', Colors.lime),
             CustomButton(
                 FluroRouter.demo19, 'Demo19带有bottomNavigationBar', Colors.pink),
-            Hero(
-                tag: 'hero',
-                child: IconButton(
-                  onPressed: () {
-//                    Navigator.pushNamed(context, 'Demo20');
-                    CustomButton(
-                        FluroRouter.demo20, 'Demo20 共享元素动画', Colors.green);
-                  },
-                  color: Colors.lightGreen,
-                  icon: Icon(Icons.threed_rotation),
-                )),
             CustomButton(FluroRouter.userCenter, '个人中心', Colors.amber),
             CustomButton(FluroRouter.userInfo, '个人中心', Colors.pink),
             CustomButton(FluroRouter.home, '主页', Colors.amber),

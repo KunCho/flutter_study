@@ -5,21 +5,14 @@ import 'demo18.dart';
 import 'demo2.dart';
 import 'demo3.dart';
 
-class Demo19 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Demo19Page();
-  }
-}
-
-class Demo19Page extends StatefulWidget {
+class Demo19 extends StatefulWidget {
   @override
   _Demo19PageState createState() {
     return _Demo19PageState();
   }
 }
 
-class _Demo19PageState extends State<Demo19Page> {
+class _Demo19PageState extends State<Demo19> {
   int _currentIndex = 0;
   final List<Widget> _children = [Demo1(), Demo2(), Demo3(), Demo18(items: new List<String>.generate(20, (i)=>'Item ${i+1}'))];
   final List<BottomNavigationBarItem> _list = <BottomNavigationBarItem>[
