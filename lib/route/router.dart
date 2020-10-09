@@ -86,7 +86,8 @@ class FluroRouter {
     router.define(fittedBoxIntro, handler: fittedBoxIntroHandler);
     router.define(aspectRatioIntro, handler: aspectRatioIntroHandler);
     router.define(baseLineIntro, handler: baseLineIntroHandler);
-    router.define(fractionallySizeBoxIntro, handler: fractionallySizeBoxIntroHandler);
+    router.define(fractionallySizeBoxIntro,
+        handler: fractionallySizeBoxIntroHandler);
     router.define(intrinsicIntro, handler: intrinsicIntroHandler);
     router.define(limitedBoxIntro, handler: limitedBoxIntroHandler);
     router.define(offstageIntro, handler: offstageIntroHandler);
@@ -95,8 +96,10 @@ class FluroRouter {
   }
 
   // 对参数进行encode，解决参数中有特殊字符，影响fluro路由匹配
-  static Future navigateTo(BuildContext context, String path, {Map<String, dynamic> params, TransitionType transition = TransitionType.native}) {
-    String query =  "";
+  static Future navigateTo(BuildContext context, String path,
+      {Map<String, dynamic> params,
+      TransitionType transition = TransitionType.native}) {
+    String query = "";
     if (params != null) {
       int index = 0;
       for (var key in params.keys) {
@@ -113,7 +116,13 @@ class FluroRouter {
     print('我是navigateTo传递的参数：$query');
 
     path = path + query;
-    return router.navigateTo(context, path, transition:transition);
+    return router.navigateTo(context, path, transition: transition);
   }
 
+  static Future navigateToMain(BuildContext context,
+      {Map<String, dynamic> params,
+        TransitionType transition = TransitionType.native}){
+
+    return router.navigateTo(context, root,clearStack: true,transition: TransitionType.native);
+  }
 }

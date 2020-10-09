@@ -34,6 +34,17 @@ class BasicLayoutComponent extends StatelessWidget {
               CustomButton(FluroRouter.offstageIntro, 'Offstage简单介绍与使用', Colors.amber),
               CustomButton(FluroRouter.transformIntro, 'Transform简单介绍与使用', Colors.brown),
               CustomButton(FluroRouter.flowIntro, 'FlowIntro简单介绍与使用', Colors.deepPurple),
+              RaisedButton(
+                onPressed: () {
+                  FluroRouter.navigateToMain(context);
+//                Routes
+                },
+                child: Text(
+                  '清栈返回',
+                  style: TextStyle(color: Colors.white),
+                ),
+                color: Colors.lime,
+              ),
             ],
           ),
         ),

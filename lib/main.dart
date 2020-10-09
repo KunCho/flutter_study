@@ -14,7 +14,6 @@ import 'not_found_page.dart';
 const int ThemeColor = 0xFFC91B3A;
 
 void main() {
-//  FluroRouter.setupRouter();
   final router = Router();
   FluroRouter.configureRoutes(router);
   FluroRouter.router =router;
@@ -36,8 +35,6 @@ class MyApp extends StatelessWidget {
 //      ),
 
       initialRoute: '/',
-
-
       debugShowCheckedModeBanner: false,
       //注册路由表
       onGenerateRoute: FluroRouter.router.generator,//使用Fluro注册路由表
@@ -83,27 +80,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Timer timer;
+//  Timer timer;
   static const platform = const MethodChannel('app.channel.shared.data');
   String dataShared = 'No data';
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        color: const Color(ThemeColor),
-        child: Center(
-          child: SpinKitPouringHourglass(color: Colors.white),
-        ),
-      ),
-    );
+    return DemoPage();
   }
 
   @override
   void initState() {
     super.initState();
     getSharedText();
-    timer = new Timer(const Duration(milliseconds: 500), () {
+    /*timer = new Timer(const Duration(milliseconds: 500), () {
       try {
         Navigator.of(context).pushAndRemoveUntil(
             MaterialPageRoute(
@@ -112,12 +102,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     Route route) =>
                 route == null);
       } catch (e) {}
-    });
+    });*/
   }
 
   @override
   void dispose() {
-    timer.cancel();
+//    timer.cancel();
     super.dispose();
   }
 
