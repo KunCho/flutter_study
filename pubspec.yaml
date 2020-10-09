@@ -51,6 +51,7 @@ dependencies:
   flutter_redux: ^0.6.0
   redux: ^4.0.0
   fluro: "^1.6.3"
+  convert: ^2.1.1
 
 dev_dependencies:
   flutter_test:

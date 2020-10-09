@@ -30,8 +30,21 @@ class DemoPage extends StatelessWidget {
               ),
               color: Colors.cyan,
             ),
-            CustomButton(
-                FluroRouter.basicLayout, 'Demo1 基础布局组件介绍', Colors.brown),
+            RaisedButton(
+              onPressed: () {
+                FluroRouter.navigateTo(context, FluroRouter.basicLayout,params: {
+                  'pageTitle':'基础布局控件🧘🏻‍♀️',
+                  'id':'1988',
+                  'gender':'female'
+                });
+//                Routes
+              },
+              child: Text(
+                'Demo1 基础布局组件介绍',
+                style: TextStyle(color: Colors.white),
+              ),
+              color: Colors.brown,
+            ),
             CustomButton(
                 FluroRouter.demo1, 'Demo1 带有banner页面 动态改版', Colors.orange),
             CustomButton(FluroRouter.demo2, 'Demo2 简单布局页面', Colors.teal),

@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study/custom_button.dart';
 
 class BasicLayoutComponent extends StatelessWidget {
+  final String pageTitle;
+
+  BasicLayoutComponent({@required this.pageTitle});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('基础布局控件',),
+        title: Text('$pageTitle',),
       ),
       body: Container(
         color: Color(0xFFF3F3F3),
