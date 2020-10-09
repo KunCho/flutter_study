@@ -35,6 +35,19 @@ class FluroRouter {
   static String userFakeWeChat = '/UserFakeWeChat';
   static String sampleAppPage = '/SampleAppPage';
 
+  static String containerIntro = '/ContainerIntro';
+  static String paddingIntro = '/PaddingIntro';
+  static String alignIntro = '/AlignIntro';
+  static String fittedBoxIntro = '/FittedBoxIntro';
+  static String aspectRatioIntro = '/AspectRatioIntro';
+  static String baseLineIntro = '/BaseLineIntro';
+  static String fractionallySizeBoxIntro = '/FractionallySizeBoxIntro';
+  static String intrinsicIntro = '/IntrinsicIntro';
+  static String limitedBoxIntro = '/LimitedBoxIntro';
+  static String offstageIntro = '/OffstageIntro';
+  static String transformIntro = '/TransformIntro';
+  static String flowIntro = '/FlowIntro';
+
   static void configureRoutes(Router router) {
     router.notFoundHandler = Handler(
         handlerFunc: (BuildContext context, Map<String, dynamic> params) {
@@ -66,6 +79,19 @@ class FluroRouter {
     router.define(communication, handler: communicationHandler);
     router.define(userFakeWeChat, handler: userFakeWeChatHandler);
     router.define(sampleAppPage, handler: sampleAppPageHandler);
+
+    router.define(containerIntro, handler: containerIntroHandler);
+    router.define(paddingIntro, handler: paddingIntroHandler);
+    router.define(alignIntro, handler: alignIntroHandler);
+    router.define(fittedBoxIntro, handler: fittedBoxIntroHandler);
+    router.define(aspectRatioIntro, handler: aspectRatioIntroHandler);
+    router.define(baseLineIntro, handler: baseLineIntroHandler);
+    router.define(fractionallySizeBoxIntro, handler: fractionallySizeBoxIntroHandler);
+    router.define(intrinsicIntro, handler: intrinsicIntroHandler);
+    router.define(limitedBoxIntro, handler: limitedBoxIntroHandler);
+    router.define(offstageIntro, handler: offstageIntroHandler);
+    router.define(transformIntro, handler: transformIntroHandler);
+    router.define(flowIntro, handler: flowIntroHandler);
   }
 
   // 对参数进行encode，解决参数中有特殊字符，影响fluro路由匹配

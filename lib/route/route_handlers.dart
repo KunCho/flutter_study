@@ -2,6 +2,18 @@ import 'dart:convert';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study/basic_component/basic_layout_component.dart';
+import 'package:flutter_study/basic_component/intro/Intrinsic_intro.dart';
+import 'package:flutter_study/basic_component/intro/align_intro.dart';
+import 'package:flutter_study/basic_component/intro/aspectRatio_intro.dart';
+import 'package:flutter_study/basic_component/intro/baseline_intro.dart';
+import 'package:flutter_study/basic_component/intro/container_intro.dart';
+import 'package:flutter_study/basic_component/intro/fittedBox_intro.dart';
+import 'package:flutter_study/basic_component/intro/flow_intro.dart';
+import 'package:flutter_study/basic_component/intro/fractionallySizeBox_intro.dart';
+import 'package:flutter_study/basic_component/intro/limitedBox_intro.dart';
+import 'package:flutter_study/basic_component/intro/offstage_intro.dart';
+import 'package:flutter_study/basic_component/intro/padding_intro.dart';
+import 'package:flutter_study/basic_component/intro/transform_intro.dart';
 import 'package:flutter_study/home/home.dart';
 import 'package:flutter_study/model/user.dart';
 import 'package:flutter_study/user/user_center.dart';
@@ -39,7 +51,9 @@ var loginHandler = Handler(
 var basicLayoutComponentHandler =
     Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
   String pageTitle = params['pageTitle']?.first;
-  print('--------Handerl接受参数---------->${pageTitle}');
+  print('--------Handerl接受参数 pageTitle---------->${pageTitle}');
+  print('--------Handerl接受参数 id---------->${params['id']?.first}');
+  print('--------Handerl接受参数 gender---------->${params['gender']?.first}');
   print(params.toString());
   print('==================================');
 
@@ -112,3 +126,40 @@ var userFakeWeChatHandler = Handler(
 var sampleAppPageHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
         SampleApp());
+
+var containerIntroHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+        ContainerIntro());
+var paddingIntroHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+        PaddingIntro());
+var alignIntroHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+        AlignIntro());
+var fittedBoxIntroHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+        FittedBoxIntro());
+var aspectRatioIntroHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+        AspectRatioIntro());
+var baseLineIntroHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+        BaseLineIntro());
+var fractionallySizeBoxIntroHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+        FractionallySizeBoxIntro());
+var intrinsicIntroHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+        IntrinsicIntro());
+var limitedBoxIntroHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+        LimitedBoxIntro());
+var offstageIntroHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+        OffstageIntro());
+var transformIntroHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+        TransformIntro());
+var flowIntroHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+        FlowIntro());
