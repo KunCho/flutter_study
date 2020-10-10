@@ -1,4 +1,4 @@
-import 'package:fluro/fluro.dart';
+import 'package:fluro/fluro.dart' as FluroRouter;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -8,8 +8,8 @@ import '../login_demo.dart';
 import '../not_found_page.dart';
 import 'route_handlers.dart';
 
-class FluroRouter {
-  static Router router;
+class FluroRouters {
+  static FluroRouter.Router router;
 
   static String root = '/';
   static String login = '/LoginDemo';
@@ -48,8 +48,8 @@ class FluroRouter {
   static String transformIntro = '/TransformIntro';
   static String flowIntro = '/FlowIntro';
 
-  static void configureRoutes(Router router) {
-    router.notFoundHandler = Handler(
+  static void configureRoutes(FluroRouter.Router router) {
+    router.notFoundHandler = FluroRouter.Handler(
         handlerFunc: (BuildContext context, Map<String, dynamic> params) {
       print('route not found!');
 //      NotFoundPage();
@@ -71,7 +71,6 @@ class FluroRouter {
     router.define(demo17, handler: demo17Handler);
     router.define(demo18, handler: demo18Handler);
     router.define(demo19, handler: demo19Handler);
-    router.define(demo20, handler: demo20Handler);
     router.define(demo23, handler: demo23Handler);
     router.define(userCenter, handler: userCenterHandler);
     router.define(userInfo, handler: userInfoHandler);
@@ -98,7 +97,7 @@ class FluroRouter {
   // 对参数进行encode，解决参数中有特殊字符，影响fluro路由匹配
   static Future navigateTo(BuildContext context, String path,
       {Map<String, dynamic> params,
-      TransitionType transition = TransitionType.native}) {
+        FluroRouter.TransitionType transition = FluroRouter.TransitionType.native}) {
     String query = "";
     if (params != null) {
       int index = 0;
@@ -121,8 +120,8 @@ class FluroRouter {
 
   static Future navigateToMain(BuildContext context,
       {Map<String, dynamic> params,
-        TransitionType transition = TransitionType.native}){
+        FluroRouter.TransitionType transition = FluroRouter.TransitionType.native}){
 
-    return router.navigateTo(context, root,clearStack: true,transition: TransitionType.native);
+    return router.navigateTo(context, root,clearStack: true,transition: FluroRouter.TransitionType.native);
   }
 }

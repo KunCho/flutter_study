@@ -22,21 +22,21 @@ class BasicLayoutComponent extends StatelessWidget {
           child: Column(
             children: [
 
-              CustomButton(FluroRouter.containerIntro, 'Container简单介绍与使用', Colors.cyan),
-              CustomButton(FluroRouter.paddingIntro, 'Padding简单介绍与使用', Colors.pink),
-              CustomButton(FluroRouter.alignIntro, 'Align、Center简单介绍与使用', Colors.purple),
-              CustomButton(FluroRouter.fittedBoxIntro, 'FittedBox简单介绍与使用', Colors.lightGreen),
-              CustomButton(FluroRouter.aspectRatioIntro, 'AspectRatio简单介绍与使用', Colors.lightBlue),
-              CustomButton(FluroRouter.baseLineIntro, 'BaseLine简单介绍与使用', Colors.grey),
-              CustomButton(FluroRouter.fractionallySizeBoxIntro, 'FractionallySizeBox简单介绍与使用', Colors.indigo),
-              CustomButton(FluroRouter.intrinsicIntro, 'Intrinsic简单介绍与使用', Colors.orange),
-              CustomButton(FluroRouter.limitedBoxIntro, 'LimitedBox简单介绍与使用', Colors.yellow),
-              CustomButton(FluroRouter.offstageIntro, 'Offstage简单介绍与使用', Colors.amber),
-              CustomButton(FluroRouter.transformIntro, 'Transform简单介绍与使用', Colors.brown),
-              CustomButton(FluroRouter.flowIntro, 'FlowIntro简单介绍与使用', Colors.deepPurple),
+              CustomButton(FluroRouters.containerIntro, 'Container简单介绍与使用', Colors.cyan),
+              CustomButton(FluroRouters.paddingIntro, 'Padding简单介绍与使用', Colors.pink),
+              CustomButton(FluroRouters.alignIntro, 'Align、Center简单介绍与使用', Colors.purple),
+              CustomButton(FluroRouters.fittedBoxIntro, 'FittedBox简单介绍与使用', Colors.lightGreen),
+              CustomButton(FluroRouters.aspectRatioIntro, 'AspectRatio简单介绍与使用', Colors.lightBlue),
+              CustomButton(FluroRouters.baseLineIntro, 'BaseLine简单介绍与使用', Colors.grey),
+              CustomButton(FluroRouters.fractionallySizeBoxIntro, 'FractionallySizeBox简单介绍与使用', Colors.indigo),
+              CustomButton(FluroRouters.intrinsicIntro, 'Intrinsic简单介绍与使用', Colors.orange),
+              CustomButton(FluroRouters.limitedBoxIntro, 'LimitedBox简单介绍与使用', Colors.yellow),
+              CustomButton(FluroRouters.offstageIntro, 'Offstage简单介绍与使用', Colors.amber),
+              CustomButton(FluroRouters.transformIntro, 'Transform简单介绍与使用', Colors.brown),
+              CustomButton(FluroRouters.flowIntro, 'FlowIntro简单介绍与使用', Colors.deepPurple),
               RaisedButton(
                 onPressed: () {
-                  FluroRouter.navigateToMain(context);
+                  FluroRouters.navigateToMain(context);
 //                Routes
                 },
                 child: Text(

@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:fluro/fluro.dart';
+import 'package:fluro/fluro.dart' as FluroRouter;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -14,9 +14,9 @@ import 'not_found_page.dart';
 const int ThemeColor = 0xFFC91B3A;
 
 void main() {
-  final router = Router();
-  FluroRouter.configureRoutes(router);
-  FluroRouter.router =router;
+  final router = FluroRouter.Router();
+  FluroRouters.configureRoutes(router);
+  FluroRouters.router =router;
   runApp(MyApp());
 }
 
@@ -37,21 +37,9 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       debugShowCheckedModeBanner: false,
       //注册路由表
-      onGenerateRoute: FluroRouter.router.generator,//使用Fluro注册路由表
+      onGenerateRoute: FluroRouters.router.generator,//使用Fluro注册路由表
       /*routes: <String, WidgetBuilder>{
         "/BasicLayoutComponent":(BuildContext context) => BasicLayoutComponent(),
-        "/ContainerIntro":(BuildContext context) => ContainerIntro(),
-        "/PaddingIntro":(BuildContext context) => PaddingIntro(),
-        "/AlignIntro":(BuildContext context) => AlignIntro(),
-        "/FittedBoxIntro":(BuildContext context) => FittedBoxIntro(),
-        "/AspectRatioIntro":(BuildContext context) => AspectRatioIntro(),
-        "/BaseLineIntro":(BuildContext context) => BaseLineIntro(),
-        "/FractionallySizeBoxIntro":(BuildContext context) => FractionallySizeBoxIntro(),
-        "/IntrinsicIntro":(BuildContext context) => IntrinsicIntro(),
-        "/LimitedBoxIntro":(BuildContext context) => LimitedBoxIntro(),
-        "/OffstageIntro":(BuildContext context) => OffstageIntro(),
-        "/TransformIntro":(BuildContext context) => TransformIntro(),
-        "/FlowIntro":(BuildContext context) => FlowIntro(),
         "new_page": (context) => NewRoute(
               value: '嘻嘻哈哈',
             ),

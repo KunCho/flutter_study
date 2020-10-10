@@ -12,7 +12,7 @@ class CustomButton extends StatelessWidget{
     return RaisedButton(onPressed: (){
       print('打印：===='+label);
 //      Navigator.pushNamed(context, label);
-      FluroRouter.navigateTo(context, label);
+      FluroRouters.navigateTo(context, label);
 
     },child: Text(title,style: TextStyle(color: Colors.white),),color: color,);
   }
